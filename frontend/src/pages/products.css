@@ -1,0 +1,20 @@
+
+#productsPage{
+    justify-content: center;
+   
+}
+
+
+
+.cardFirst {
+    padding: 30px;
+}
+.productsPage{
+    padding-top: 4vw;
+    color: rgb(28, 121, 197);
+}
+
+
+.proName{
+    color: blue;
+}

@@ -1,0 +1,26 @@
+
+#productsPage{
+    justify-content: center;
+   
+}
+*{
+    box-sizing: border-box;
+}
+.admProduct{
+    margin-top: 8%;
+}
+
+
+
+.cardFirst {
+    padding: 30px;
+}
+.productsPage{
+    padding-top: 4vw;
+    color: rgb(28, 121, 197);
+}
+
+
+.proName{
+    color: blue;
+}
