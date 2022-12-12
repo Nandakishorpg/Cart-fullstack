@@ -9,7 +9,7 @@ export default function Home() {
 
   return (
     <div>
-     console.log("hiiii");
+    
 
 
       <Nav></Nav>
