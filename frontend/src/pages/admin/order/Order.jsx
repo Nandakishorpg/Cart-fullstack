@@ -42,9 +42,11 @@ export default function Order() {
 
           <tbody>
             <tr>
+              <td>{products.userName}</td>
+              <td>{products.userId}</td>
               <td>{products.productName}</td>
-              <td></td>
-              <td></td>
+              <td>{products.quantity}</td>
+              <td>{products.price}</td>
             </tr>
 
           </tbody>

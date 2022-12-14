@@ -10,7 +10,6 @@ export default function Home() {
   return (
     <div>
       
-    console.log("hiii");
 
 
       <Nav></Nav>

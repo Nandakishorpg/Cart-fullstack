@@ -9,7 +9,7 @@ export default function Admnav() {
     return (
         <div>
             <div className='navContainer'>
-                <nav className="navbar navbar-expand-lg navbar-dark bg-dark static-top" id='vf'>
+                <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id='vf'>
                     <div class="container">
                         <img src="assets/images/header-logo.png" className='logoHeader' alt=""></img>
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">

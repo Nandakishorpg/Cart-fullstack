@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react'
 import { Button, Card, CardContent, CardMedia } from '@mui/material';
 import { Link } from 'react-router-dom'
 import './admproduct.css'
+import Admnav from '../admnav/Admnav';
 
 
 export default function Admproduct() {
@@ -31,6 +32,7 @@ export default function Admproduct() {
 
     return (
         <div className='admProduct'>
+            <Admnav/>
             <div className="Container">
                 <div className="row" id='productsPage'>
                     {viewProduct.map((products) => (

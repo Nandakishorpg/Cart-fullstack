@@ -47,40 +47,52 @@ orderRouter.get('/view', function (req, res) {
 
     order.aggregate([
         {
-          '$lookup': {
-            'from': 'product_tbs', 
-            'localField': 'productId', 
-            'foreignField': '_id', 
-            'as': 'result'
-          }
-         
+            '$lookup': {
+                'from': 'product_tbs',
+                'localField': 'productId',
+                'foreignField': '_id',
+                'as': 'result'
+            }
+
         },
         {
             '$unwind': '$result'
         },
         {
-        "$group": {
-            '_id': "$_id",
-           
-            'productName': { "$first": "$result.productName" },
-            
+            "$group": {
+                '_id': "$_id",
+                'productName': { "$first": "$result.productName" },
+                'userName': { "$first": "$userName" },
+                'quantity': { "$first": "$quantity" },
+                'price': {
+                    "$first":
+                        "$price"
+                },
+                'userId':{
+                    "$first":
+                    "$userId"
+                }
 
 
 
-        }}
 
-      ])
-    .then((data) => {
-        console.log("joined Data",data);
-        return res.status(200).json({
-            success: true,
-            error: false,
-            data: data
 
+
+            }
+        }
+
+    ])
+        .then((data) => {
+            console.log("joined Data", data);
+            return res.status(200).json({
+                success: true,
+                error: false,
+                data: data
+
+
+            })
 
         })
-
-    })
 })
 
 
