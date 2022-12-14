@@ -30,8 +30,8 @@ export default function Newcart() {
 
 
     const userId = JSON.parse(localStorage.getItem("userDetails"))
-    console.log(userId.userid)
-    axios.get(`http://localhost:5000/cart/cartdata/${userId.userid}`).then((response) => {
+    console.log(userId?.userid)
+    axios.get(`http://localhost:5000/cart/cartdata/${userId?.userid}`).then((response) => {
 
 
       console.log(response.data.data);

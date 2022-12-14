@@ -13,30 +13,19 @@ export default function Nav() {
 
 
     useEffect(() => {
-
-
-
         const userId = JSON.parse(localStorage.getItem("userDetails"))
-        console.log(userId.userid)
-
-        setCart(userId.userid)
-
-
-
-
-
-
-
+        // console.log(userId.userid)
+        setCart(userId?.userid)
     }, [])
 
 
-    const clear =()=>{
+    const clear = () => {
         const clears = JSON.parse(localStorage.clear("userDetails"))
 
         console.log(clears);
 
     }
-    console.log(cart);
+    // console.log(cart);
 
 
     return (
@@ -48,7 +37,6 @@ export default function Nav() {
 
             <nav className="navbar navbar-expand-lg navbar-dark bg-dark static-top" id='vf'>
                 <div class="container">
-                    {/* <a class="navbar-brand" href="#"> */}
                     <img src="assets/images/header-logo.png" className='logoHeader' alt=""></img>
                     {/* </a> */}
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -79,7 +67,7 @@ export default function Nav() {
 
 
                             </li>
-                           
+
                             <li class="nav-item">
 
                                 <Link className='nav-link' padding={1} to="/productview" underline='none'><span className='linkSpan'>ProductView</span>
@@ -93,14 +81,14 @@ export default function Nav() {
 
                             </li>
 
-                            {cart?.length !=0 ?
+                            {cart?.length === 0 ?
 
                                 <li class="nav-item">
-                                    <Link className='nav-link' padding={1} to="/login" underline='none'><span className='linkSpan'><Button style={{color:'grey',textDecorationStyle:'none'}} className='logout' onClick={clear}>LogOut</Button></span>
+                                    <Link className='nav-link' padding={1} to="/login" underline='none'><span className='linkSpan'><Button style={{ color: 'grey', textDecorationStyle: 'none' }} className='logout' onClick={clear}>LogOut</Button></span>
                                     </Link>
 
                                 </li> : ""}
-                                
+
 
                         </ul>
                     </div>
