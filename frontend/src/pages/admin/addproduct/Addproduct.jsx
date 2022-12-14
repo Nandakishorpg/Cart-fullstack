@@ -5,6 +5,7 @@ import './addproduct.css'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { Link } from "react-router-dom";
+import Admnav from '../admnav/Admnav';
 
 
 
@@ -73,6 +74,7 @@ export default function Addproduct() {
 
     return (
         <div className='addP'>
+            <Admnav></Admnav>
             <div className="container">
                 <form className='formClass' onSubmit={addProduct}>
 
