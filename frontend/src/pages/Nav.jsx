@@ -70,16 +70,17 @@ export default function Nav() {
 
                             <li class="nav-item">
 
-                                <Link className='nav-link' padding={1} to="/productview" underline='none'><span className='linkSpan'>ProductView</span>
+                                <Link className='nav-link' padding={1} to="/productview" underline='none'><span className='linkSpan'>Products</span>
                                 </Link>
 
 
                             </li>
+                            {cart?.length ===0 ?
                             <li class="nav-item">
                                 <Link className='nav-link' padding={1} to="/shopcart" underline='none'><span className='linkSpan'>Cart</span>
                                 </Link>
 
-                            </li>
+                           </li> : ""}
 
                             {cart?.length === 0 ?
 
