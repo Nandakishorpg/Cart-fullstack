@@ -1,11 +1,24 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import Button from '@mui/material'
+import { Link} from 'react-router-dom';
 import './admnav.css'
 
 
 
 export default function Admnav() {
+
+
+
+    const clear = () => {
+        const clears = JSON.parse(localStorage.clear("userDetails"))
+
+        console.log(clears);
+
+
+
+    }
+
+
+
     return (
         <div>
             <div className='navContainer'>
@@ -27,7 +40,7 @@ export default function Admnav() {
 
                                 </li>
 
-                             
+
                                 <li class="nav-item">
 
                                     <Link className='nav-link' padding={1} to="/addproduct" underline='none'><span className='linkSpan'>Add Products</span>
@@ -49,7 +62,14 @@ export default function Admnav() {
 
 
                                 </li>
-                                
+                                <li class="nav-item">
+
+                                    <Link onClick={clear} className='nav-link' to={'/login'} padding={1} underline='none'><span className='linkSpan'>Logout</span>
+                                    </Link>
+
+
+                                </li>
+
                             </ul>
                         </div>
                     </div>

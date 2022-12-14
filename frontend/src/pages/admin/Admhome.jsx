@@ -1,9 +1,20 @@
-import React from 'react'
+import React,{useEffect} from 'react'
 import Home from '../Home'
 import Admnav from './admnav/Admnav'
-import { Link } from "react-router-dom";
+import { Link ,useNavigate} from "react-router-dom";
 import '../home.css'
+import Login from '../login/Login';
 export const Admhome = () => {
+  const navigate=useNavigate()
+  const storage=localStorage.getItem("userDetails")
+  console.log(storage);
+  useEffect(() => {
+    if(storage===null){
+      console.log("hiii");
+  navigate("/login")
+    }
+   }, [])
+ 
   return (
     <div>
       

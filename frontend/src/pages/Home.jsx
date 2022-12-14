@@ -71,39 +71,6 @@ export default function Home() {
                   <span className='dealText'> DEAL OF THE DAY </span>
                 </div>
               </div>
-
-
-
-
-              {/* <div className="featured-item">
-
-                  <img className='imageFeatured' src="assets/images/item-01.jpg" alt="Item 1"></img>
-                  <h4>Jeans</h4>
-                  <h6>$10.00</h6>
-              </div>
-              <div className="featured-item">
-
-                  <img className='imageFeatured' src="assets/images/product-03.jpg" alt="Item 1"></img>
-                  <h5>Jackets</h5>
-                  <h6>$15.00</h6>
-              </div>
-              <div className="featured-item">
-
-              
-
-                  <img className='imageFeatured' src="assets/images/item-01.jpg" alt="Item 1"></img>
-                  <h5>Pants</h5>
-                  <h6>$10.00</h6>
-              </div> */}
-
-
-
-
-
-
-
-
-
             </div>
           </div>
         </div>
